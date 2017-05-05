@@ -1,0 +1,21 @@
+﻿//page laytout name
+extends _layout.jade
+
+//page html
+block page_main
+    section.index
+        div.index__hd
+            h1 hello 5
+        div.index__bd
+            p 總點擊數:{{totalClick}}
+            p 計時器:{{counter}}
+            hr
+            button(v-on:click="play(1)") 選擇關卡一
+            hr
+            div.stage1
+                div.mask(v-show="!stage[0]")
+                h2 stage1
+                div.click__box
+                    a.click__area.a1(href="javascript:" v-on:click="totalClick++")
+                    a.click__area.a2(href="javascript:" v-on:click="totalClick++")
+                    a.click__area.a3(href="javascript:" v-on:click="totalClick++")

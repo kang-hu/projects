@@ -1,0 +1,48 @@
+.btn_next {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.5472722370177507);
+  background-position: 0px -510px;
+  width:67px;
+  height: 67px;
+/*source-image:D:\myGit\friendo\BrandBase\document\gulpStartkit\src\images\sprites\btn_next.png*/
+}
+@mixin btn_next() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.5472722370177507);
+  background-position: 0px -510px;
+  width:67px;
+  height: 67px;
+/*source-image:D:\myGit\friendo\BrandBase\document\gulpStartkit\src\images\sprites\btn_next.png*/
+}
+.card_02 {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.5472722370177507);
+  background-position: -510px 0px;
+  width:530px;
+  height: 460px;
+/*source-image:D:\myGit\friendo\BrandBase\document\gulpStartkit\src\images\sprites\card_02.png*/
+}
+@mixin card_02() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.5472722370177507);
+  background-position: -510px 0px;
+  width:530px;
+  height: 460px;
+/*source-image:D:\myGit\friendo\BrandBase\document\gulpStartkit\src\images\sprites\card_02.png*/
+}
+.sprite__demo {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.5472722370177507);
+  background-position: 0px 0px;
+  width:500px;
+  height: 500px;
+/*source-image:D:\myGit\friendo\BrandBase\document\gulpStartkit\src\images\sprites\sprite__demo.png*/
+}
+@mixin sprite__demo() {
+  display: block;
+  background-image: url(../images/sprite.png?v=0.5472722370177507);
+  background-position: 0px 0px;
+  width:500px;
+  height: 500px;
+/*source-image:D:\myGit\friendo\BrandBase\document\gulpStartkit\src\images\sprites\sprite__demo.png*/
+}

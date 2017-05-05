@@ -1,0 +1,46 @@
+﻿//page laytout name
+extends _layout.jade
+//page customized Information
+block pageInfo
+    - var pageTitle = "pageTitle"
+    - var pageDesc = "pageDesc"
+//page html
+block page_main
+    section#el.sample
+        div.sample__hd
+        div.sample__bd
+        div.sample__ft
+        section
+            div.l-container
+                h2 {{initText}}
+                div.vue
+                    form(v-on:submit.prevent="signup")
+                        select(v-model="selectOpt")
+                            option(v-for="obj in selectLists",:disabled="obj.value == ''",v-bind:value="obj.value") {{obj.text}}
+                        p select Val : {{selectOpt}}
+                        button(type="submit") submit
+        section
+            div.sample__content
+                div.l-container
+                    div.l-vm
+                        div.l-vm__content
+                            h2 demo verticle
+                            p 灰色區塊內垂直置中
+                            div.sprite__demo
+        section
+            div.l-container
+                div.mdDemo
+                    h2 #jade scss example
+                    div
+                        - var interpolation= "Interpolation";
+                        h3 ##
+                            span #{interpolation}
+                            |by jade
+                    div
+                        h3 ##jade loop
+                        - for (var i=1; i<4; i++) {
+                            div(class='row'+i) 
+                                p row+#{i}
+                        - }
+
+

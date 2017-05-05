@@ -1,0 +1,122 @@
+@charset 'UTF-8';
+
+/* ----- IMPORT -----*/
+
+//1.utils
+@import "utils/_bemify.scss"; 
+    //A set of Sass mixins to write well-structured, maintainable, idiomatic BEM-style .scss source:
+@import "utils/_variables.scss";
+@import "utils/_mixins.scss";
+@import "utils/_grid.scss";
+//sprite scss import 至少要啟用gulp一次
+//@import "_sprite.scss";
+//2.vendors
+//3.base
+@import "base/_reset.scss";
+@import "base/_typography.scss";
+//4.layout
+@import "layout/_layout.scss";
+@import "layout/_nav.scss";
+//5.components
+@import "components/_load.scss";
+//html 在 load.js 裡
+//6.pages
+//7.themes
+
+$tran:0.3s ease-in all;
+$boxShadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+
+.sample {
+    .l-vm {
+        height: 180px;
+        width: 100%;
+        background: #d6d6d6;
+        text-align: center;
+        box-shadow: $boxShadow;
+    }
+    .l-vm__content {
+        background: red;
+        min-height: 100px;
+    }
+    @include respond-to(small-up) {}
+    section ,h2, h3{
+        margin: 0 0 20px;
+        span {
+            color: red;
+        }
+    }
+    @for $i from 1 through 3 {
+        .row#{$i} {
+            color: red;
+        } 
+    }
+}
+
+.k {
+    width: 100%;
+}
+
+.index {
+    width: 600px;
+    margin: 0 auto;
+    &__hd {
+        padding: 20px 0;
+    }
+}
+
+.click {
+    &__box {
+        background: #ccc;
+        height: 260px;
+        position: relative;
+        margin: 10px 0;
+    }
+    &__area {
+        position: absolute;
+        &.a1 {
+            background: #1cb09a;
+            left: 15px;
+            top: 20px;
+            width: 180px;
+            height: 180px;
+        }
+        &.a2 {
+            background: #dc5250;
+            left: 210px;
+            bottom: 20px;
+            width: 180px;
+            height: 180px;
+        }
+        &.a3 {
+            background: #418bcc;
+            left: 405px;
+            top: 40px;
+            width: 180px;
+            height: 180px;
+        }
+    }
+}
+
+p {
+    font-size: 25px;
+}
+
+button {
+    padding: 10px;
+    font-size: 25px;
+}
+
+hr {
+    margin: 20px 0;
+}
+
+.stage1 {
+    position: relative;
+    .mask {
+        background: rgba(0,0,0,0.8);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+}
